@@ -1,12 +1,14 @@
 {
-  "/sitemap.xml/route": "/sitemap.xml",
+  "/api/health/route": "/api/health",
+  "/api/users/route": "/api/users",
   "/robots.txt/route": "/robots.txt",
-  "/admin/login/page": "/admin/login",
-  "/admin/page": "/admin",
-  "/_not-found/page": "/_not-found",
+  "/sitemap.xml/route": "/sitemap.xml",
   "/book/page": "/book",
   "/login/page": "/login",
-  "/products/page": "/products",
+  "/admin/login/page": "/admin/login",
   "/contact/page": "/contact",
-  "/page": "/"
+  "/page": "/",
+  "/_not-found/page": "/_not-found",
+  "/admin/page": "/admin",
+  "/products/page": "/products"
 }
