@@ -1,3 +1,5 @@
+'use client';
+
 import { ArrowRight, ShieldCheck, Sparkles, Clock3, Camera, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';

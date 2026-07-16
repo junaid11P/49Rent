@@ -1,0 +1,12 @@
+{
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/robots.txt/route": "/robots.txt",
+  "/admin/login/page": "/admin/login",
+  "/admin/page": "/admin",
+  "/_not-found/page": "/_not-found",
+  "/book/page": "/book",
+  "/login/page": "/login",
+  "/products/page": "/products",
+  "/contact/page": "/contact",
+  "/page": "/"
+}
