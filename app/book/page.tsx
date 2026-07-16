@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { ArrowRight, Camera, CircleCheck, MapPin, ReceiptText, UploadCloud } from 'lucide-react';
 
-const durations = ['4 Hours', '8 Hours', '24 Hours', '2 Days', '3 Days', 'Weekly', 'Monthly'];
+const durations = ['4 Hours', '8 Hours', '24 Hours'];
 
 export default function BookPage() {
   const [step, setStep] = useState(1);
@@ -22,21 +22,21 @@ export default function BookPage() {
           <div className="mb-6 flex items-center justify-between rounded-2xl border border-white/10 bg-white/6 p-4">
             <div>
               <p className="text-sm text-slate-400">Selected camera</p>
-              <p className="text-lg font-semibold text-white">DJI Action 5 Pro</p>
+              <p className="text-lg font-semibold text-white">Item will appear after admin upload</p>
             </div>
             <div className="rounded-full bg-sky-400/10 p-3 text-sky-300"><Camera className="h-5 w-5" /></div>
           </div>
           <div className="space-y-3">
             <div className="rounded-2xl border border-white/10 p-4">
               <div className="flex items-center justify-between">
-                <span className="text-slate-300">Base price</span>
+                <span className="text-slate-300">Base rate</span>
                 <span className="font-medium text-white">₹49/hour</span>
               </div>
             </div>
             <div className="rounded-2xl border border-white/10 p-4">
               <div className="flex items-center justify-between">
                 <span className="text-slate-300">Security deposit</span>
-                <span className="font-medium text-white">₹5,000</span>
+                <span className="font-medium text-white">Pending admin setup</span>
               </div>
             </div>
             <div className="rounded-2xl border border-white/10 p-4">

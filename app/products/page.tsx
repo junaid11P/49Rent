@@ -4,27 +4,11 @@ import Link from 'next/link';
 const cameras = [
   {
     id: 1,
-    name: 'DJI Action 5 Pro',
+    name: 'Coming soon',
     price: '₹49/hr',
     deposit: '₹5,000',
-    badge: 'Best Seller',
-    description: 'Waterproof, compact, and perfect for adventure travel.',
-  },
-  {
-    id: 2,
-    name: 'DJI Osmo Pocket 3',
-    price: '₹69/hr',
-    deposit: '₹6,000',
-    badge: 'New',
-    description: 'Ultra-portable stabilized filming for creators on the move.',
-  },
-  {
-    id: 3,
-    name: 'DJI Mini 4 Pro',
-    price: '₹89/hr',
-    deposit: '₹8,000',
-    badge: 'Cinema',
-    description: 'Aerial storytelling with premium image quality.',
+    badge: 'Pending upload',
+    description: 'Camera details will appear here once the admin uploads the product information.',
   },
 ];
 
@@ -46,7 +30,7 @@ export default function ProductsPage() {
           <article key={camera.id} className="glass rounded-[2rem] p-6">
             <div className="mb-4 flex items-center justify-between">
               <span className="rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-sky-200">{camera.badge}</span>
-              <div className="flex items-center gap-1 text-amber-300"><Star className="h-4 w-4" /> 4.9</div>
+              <div className="flex items-center gap-1 text-amber-300"><Star className="h-4 w-4" /> —</div>
             </div>
             <div className="aspect-[4/3] rounded-[1.5rem] border border-white/10 bg-gradient-to-br from-slate-800 to-slate-950 p-6">
               <div className="flex h-full items-center justify-center">
@@ -60,7 +44,7 @@ export default function ProductsPage() {
               <div className="flex items-center justify-between"><span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4" /> Security deposit</span><span className="font-medium text-white">{camera.deposit}</span></div>
               <div className="flex items-center justify-between"><span className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Pickup available</span><span className="font-medium text-white">Today</span></div>
             </div>
-            <Link href="/book" className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-4 py-3 text-sm font-medium text-slate-950">Reserve this gear <ArrowRight className="h-4 w-4" /></Link>
+            <Link href="/book" className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-4 py-3 text-sm font-medium text-slate-950">Reserve this item <ArrowRight className="h-4 w-4" /></Link>
           </article>
         ))}
       </div>

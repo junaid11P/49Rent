@@ -10,10 +10,10 @@ const reviews = [
   { name: 'Mina', quote: 'Fast, beautiful, and reliable. It felt like Apple-level service.' },
 ];
 
-const plans = [
-  { name: 'Starter', price: '₹49/hr', description: 'Perfect for casual adventures and short shoots.' },
-  { name: 'Creator', price: '₹149/day', description: 'Ideal for content creators and weekend trips.' },
-  { name: 'Studio', price: '₹799/week', description: 'For productions that need polished gear and support.' },
+const pricingPoints = [
+  'Single transparent rate of ₹49 per hour',
+  'No confusing tier selection for customers',
+  'Admin-managed inventory and details appear automatically',
 ];
 
 export default function HomePage() {
@@ -32,7 +32,6 @@ export default function HomePage() {
           </div>
           <div className="flex items-center gap-2">
             <Link href="/login" className="rounded-full border border-white/10 px-3 py-2 text-slate-300 transition hover:text-white">Login</Link>
-            <Link href="/admin/login" className="rounded-full bg-sky-500/90 px-3 py-2 font-medium text-white transition hover:bg-sky-400">Admin Login</Link>
           </div>
         </nav>
 
@@ -51,10 +50,10 @@ export default function HomePage() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/products" className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 font-medium text-slate-950 transition hover:scale-[1.02]">
-                  Rent Now <ArrowRight className="h-4 w-4" />
+                  Book a Camera <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link href="#pricing" className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-5 py-3 font-medium text-slate-100 transition hover:bg-white/12">
-                  View Pricing <ChevronRight className="h-4 w-4" />
+                  See Pricing <ChevronRight className="h-4 w-4" />
                 </Link>
               </div>
               <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-slate-300">
@@ -103,22 +102,24 @@ export default function HomePage() {
       </section>
 
       <section id="pricing" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mb-8 flex items-end justify-between gap-4">
-          <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-sky-300">Pricing</p>
-            <h2 className="text-3xl font-semibold text-white sm:text-4xl">Flexible plans for every shoot</h2>
-          </div>
-          <p className="max-w-md text-sm text-slate-400">Simple rates, secure deposit, and premium support for every rental.</p>
-        </div>
-        <div className="grid gap-6 md:grid-cols-3">
-          {plans.map((plan) => (
-            <div key={plan.name} className="glass rounded-3xl p-6">
-              <h3 className="text-xl font-semibold text-white">{plan.name}</h3>
-              <p className="mt-2 text-sm text-slate-400">{plan.description}</p>
-              <p className="mt-6 text-3xl font-semibold text-white">{plan.price}</p>
-              <button className="mt-6 w-full rounded-full bg-sky-500/90 px-4 py-3 text-sm font-medium text-white">Book this plan</button>
+        <div className="glass rounded-[2rem] p-8 sm:p-10">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-sm uppercase tracking-[0.3em] text-sky-300">Pricing</p>
+              <h2 className="mt-2 text-3xl font-semibold text-white sm:text-4xl">One simple rate, made effortless</h2>
+              <p className="mt-3 text-sm text-slate-400">Every camera is rented at a clear hourly rate of ₹49, with a secure deposit and premium support ready when the admin adds inventory.</p>
             </div>
-          ))}
+            <div className="rounded-[1.5rem] border border-sky-400/20 bg-sky-400/10 p-6 text-center">
+              <p className="text-sm text-slate-300">Starting from</p>
+              <p className="mt-2 text-4xl font-semibold text-white">₹49/hr</p>
+              <Link href="/book" className="mt-5 inline-flex items-center justify-center rounded-full bg-white px-4 py-3 text-sm font-medium text-slate-950">Reserve now</Link>
+            </div>
+          </div>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {pricingPoints.map((point) => (
+              <div key={point} className="rounded-2xl border border-white/10 bg-white/6 p-4 text-sm text-slate-300">{point}</div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -156,10 +157,11 @@ export default function HomePage() {
 
       <footer className="mx-auto flex max-w-7xl flex-col gap-4 border-t border-white/10 px-4 py-10 text-sm text-slate-400 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <p>© 2026 49Rent. Premium camera rentals reimagined.</p>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4">
           <Link href="#pricing" className="transition hover:text-white">Pricing</Link>
           <Link href="/products" className="transition hover:text-white">Products</Link>
           <Link href="/contact" className="transition hover:text-white">Contact</Link>
+          <Link href="/admin/login" className="transition hover:text-white">Admin Login</Link>
         </div>
       </footer>
     </main>
